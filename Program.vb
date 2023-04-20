@@ -1,26 +1,19 @@
-﻿Imports System
-Imports System.Data
-Imports System.Runtime.InteropServices
-
-
+Imports System
 Module Program
     Sub Main(args As String())
-        Dim S As String
 
+        Dim q, w, e, r, t, y As Double
+        q = 1.5
+        w = 0.7
+        e = 2
+        r = (MathF.Pow(MathF.E, q) - MathF.Cos(w)) / MathF.Sqrt(MathF.Abs(q * w * e))
 
-        Console.WriteLine("Ââåäèòå ñòðîêó")
-        S = Console.ReadLine()
-        For i As Integer = 0 To S.Length - 1
-            Console.Write(S.Chars(i))
-            Console.WriteLine(Asc(S.Chars(i)))
-            Select Case S
-                Case 32
-                    Console.WriteLine("Ïðîáåëû ")
-                    Console.WriteLine(Asc(S.Chars(i)))
-                Case 65 To 98
-                    Console.Write(" Àíãëèéñêèé ÿçûê ")
-            End Select
+        Console.WriteLine(r)
+        y = (MathF.Log(q)) - w * e
+        Console.WriteLine(y)
+        e = MathF.Sin(r * y) + 2
+        Console.WriteLine(e)
 
-        Next
     End Sub
+
 End Module
